@@ -66,4 +66,18 @@ body {
   color: var(--neutral-0);
   border-radius: 9999px;
   padding: 0.625rem 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.launch-button {
+  display: inline-block;
+  transition: .4s cubic-bezier(.36,.2,.07,1);
+  transition-property: opacity, transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.launch-button:hover {
+  transform: translateY(-1px);
 }
