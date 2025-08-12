@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+/* FK Grotesk font setup (add your .woff2 files under public/fonts/) */
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("/fonts/FKGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FK Grotesk";
+  src: url("/fonts/FKGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Morpho brand tokens (https://brand.morpho.org/) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutral */
+  --neutral-900: #15181A;
+  --neutral-700: #222529;
+  --neutral-500: #383B3E;
+  --neutral-300: #6F7174;
+  --neutral-100: #9C9D9F;
+  --neutral-0: #FFFFFF;
+
+  /* Blues */
+  --blue-dark: #2973FF;
+  --blue-medium: #5792FF;
+  --blue-light: #C4DAFF;
+
+  /* App theme */
+  --background: var(--neutral-900);
+  --foreground: var(--neutral-0);
+  --accent: var(--blue-dark);
+  --font-sans: "FK Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01" on, "cv05" on, "cv06" on;
+}
+
+.brand-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.brand-card {
+  background: color-mix(in oklab, var(--neutral-700), transparent 60%);
+  border: 1px solid color-mix(in oklab, var(--neutral-500), transparent 70%);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+.brand-button {
+  background: var(--accent);
+  color: var(--neutral-0);
+  border-radius: 9999px;
+  padding: 0.625rem 1rem;
 }
