@@ -33,6 +33,16 @@ export const gmorphoDashboards: DashboardItem[] = [
     embedUrl: "https://dune.com/embeds/5488133/8942189?darkMode=true",
     height: 700,
   },
+  {
+    title: "Dune Query 5488133-1",
+    embedUrl: "https://dune.com/embeds/5488133/8942191?darkMode=true",
+    height: 500,
+  },
+  {
+    title: "Dune Query 5488133-2",
+    embedUrl: "https://dune.com/embeds/5488133/8942295?darkMode=true",
+    height: 500,
+  },
 ];
 
 
