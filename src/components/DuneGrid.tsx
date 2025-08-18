@@ -22,10 +22,9 @@ export function DuneGrid({ items = DEFAULT_DASHBOARDS }: { items?: DashboardItem
           </div>
         </article>
       ))}
-      
       {/* Last two dashboards inline horizontally */}
       {inlineDashboards.length > 0 && (
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 w-full max-w-[1200px]">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full max-w-[1200px]">
           {inlineDashboards.map((item) => (
             <article key={item.title} className="p-2 md:p-4 w-full md:w-1/2">
               <div className="w-full overflow-hidden rounded-md">
